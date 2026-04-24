@@ -9,7 +9,7 @@ Chainguard Libraries are drop-in replacements for PyPI, Maven Central, and npm p
 Grab the setup guide and hand it to your AI coding assistant:
 
 ```bash
-curl -sL https://raw.githubusercontent.com/bradbock/cgstart/main/chainguard-setup.md > chainguard-setup.md
+curl -sL https://raw.githubusercontent.com/chainguardianbb/cgstart/main/chainguard-setup.md > chainguard-setup.md
 ```
 
 Then tell your AI:
