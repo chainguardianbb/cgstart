@@ -141,7 +141,12 @@ CMD ["node", "index.js"]
 
 **Tip:** Use the `:latest-dev` tag variant if they need a shell or package manager in the image (e.g., `cgr.dev/chainguard/python:latest-dev`).
 
-**Browse all free images:** https://images.chainguard.dev
+**See all available free images** by running:
+```bash
+chainctl images list --public
+```
+
+Or browse at: https://images.chainguard.dev
 
 If they only wanted containers, they're done here!
 

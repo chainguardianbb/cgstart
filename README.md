@@ -1,8 +1,9 @@
-# cgstart — Chainguard Libraries Hackathon Setup
+# cgstart — Chainguard Hackathon Setup
 
-Get your hackathon project using **malware-resistant, open source packages** in under 5 minutes — for free.
+Get your hackathon project running on **zero-CVE container images** and **malware-resistant packages** in under 5 minutes — for free.
 
-Chainguard Libraries are drop-in replacements for PyPI, Maven Central, and npm packages. They're rebuilt from verified source in an isolated build environment. If the source can't be verified, the package doesn't ship. No code changes required.
+- **Chainguard Containers** — Minimal container images with zero known CVEs. Drop them into your Dockerfile. No auth needed.
+- **Chainguard Libraries** — Drop-in replacements for PyPI, Maven Central, and npm packages, rebuilt from verified source. If the source can't be verified, the package doesn't ship.
 
 ## Quick start
 
@@ -14,7 +15,7 @@ curl -sL https://raw.githubusercontent.com/chainguardianbb/cgstart/main/chaingua
 
 Then tell your AI:
 
-> Follow the instructions in chainguard-setup.md to set me up with Chainguard Libraries
+> Follow the instructions in chainguard-setup.md to set me up with Chainguard Containers and Libraries
 
 This works with **any AI coding assistant** — Claude Code, Cursor, GitHub Copilot, Windsurf, Aider, or whatever you prefer.
 
@@ -24,12 +25,13 @@ The setup guide is human-readable too. Open `chainguard-setup.md` and follow the
 
 ## What you get
 
+- **Zero-CVE container images** — Python, Node, JDK, Go, and application images like PostgreSQL, Redis, MongoDB, Nginx, and more. Just `docker pull chainguard/python:latest`
 - **Malware-resistant packages** for Python, Java, and JavaScript — rebuilt from verified source
-- **Zero-CVE container base images** for your Dockerfile
-- **Free** — Chainguard Libraries are free for individual developers
+- **Free** — both Containers and Libraries are free for individual developers
 
 ## Learn more
 
+- [Chainguard Containers docs](https://edu.chainguard.dev/chainguard/chainguard-images/how-to-use-chainguard-images/)
 - [Chainguard Libraries docs](https://edu.chainguard.dev/chainguard/libraries/)
 - [Image catalog](https://images.chainguard.dev)
 - [Console](https://console.chainguard.dev)
