@@ -203,21 +203,23 @@ Use the Username and Password from Step 6 to configure their build tool. Only co
 
 ### Python (pip)
 
+**Important:** The Username contains a `/` character which causes a 403 error when used in URLs. Replace the `/` with `_` in the Username when embedding it in a URL.
+
 Create a `pip.conf` in the project root:
 
 ```ini
 [global]
-index-url = https://{USERNAME}:{PASSWORD}@libraries.cgr.dev/python/simple
+index-url = https://{USERNAME_WITH_SLASH_REPLACED_BY_UNDERSCORE}:{PASSWORD}@libraries.cgr.dev/python/simple
 ```
 
 Or use it directly:
 ```bash
-pip install --index-url https://{USERNAME}:{PASSWORD}@libraries.cgr.dev/python/simple <package>
+pip install --index-url https://{USERNAME_WITH_SLASH_REPLACED_BY_UNDERSCORE}:{PASSWORD}@libraries.cgr.dev/python/simple <package>
 ```
 
 For **uv**:
 ```bash
-UV_INDEX_URL=https://{USERNAME}:{PASSWORD}@libraries.cgr.dev/python/simple uv pip install <package>
+UV_INDEX_URL=https://{USERNAME_WITH_SLASH_REPLACED_BY_UNDERSCORE}:{PASSWORD}@libraries.cgr.dev/python/simple uv pip install <package>
 ```
 
 ### Java (Maven)
@@ -275,7 +277,7 @@ echo -n '{USERNAME}:{PASSWORD}' | base64
 
 Then `npm install` works as normal — packages are pulled from Chainguard.
 
-For **pnpm**, **yarn**, or **bun**: the same `.npmrc` format works.
+For **pnpm** or **bun**: the same `.npmrc` format works. For **Yarn Classic** (v1) it also works, but **Yarn 2+** (Berry) uses a different config format — see the [Yarn build config docs](https://edu.chainguard.dev/chainguard/libraries/javascript/) for details.
 
 ---
 
